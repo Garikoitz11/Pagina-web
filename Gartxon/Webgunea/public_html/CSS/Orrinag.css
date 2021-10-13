@@ -1,0 +1,177 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-ene-2019, 9:53:03
+    Author     : Garikoitz
+*/
+body{
+    font-family: Arial;
+}
+h1{
+    text-align: center;
+}
+nav ul{
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    margin: 45px;
+}
+.a{
+    text-decoration: none;
+    color: white;
+}
+img{
+    text-align: right;
+}
+.column {
+  float: left;
+  padding: 15px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.menu ul {
+  list-style-type: none;
+  margin-left: 250px;
+  padding: 0;
+  text-align: center;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: red;
+  color: white;
+}
+
+.menu li:hover {
+  background-color: darkred;
+  width: 70%;
+}
+.menu {
+  width: 75%;
+}
+#saioa{
+    float: right;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+#erregistroa{
+    float: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+body{
+  box-sizing: border-box;
+}
+
+.img-container {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+
+.clearfix1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+ul li{
+    -webkit-border-radius:10px;
+     border-radius:10px;
+     overflow:hidden;
+     list-style-type: none;
+}
+#pagamenos{
+    margin-left: 90px
+}
+.lineal{
+    padding: 25px;
+}
+#argazki1{
+    margin-left: 140px;
+}
+#argazki2{
+    margin-left: 60px;
+}
+#argazki3{
+    margin-left: 30px;
+}
+.img-container2 {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+#texto1{
+    padding-top: 0px;
+    margin-left: 234px;
+}
+#argazki4{
+    width: 205px;
+    margin-left: 165px;
+}
+#argazki5{
+    margin-left: 80px;
+}
+#argazki6{
+    width: 205px;
+    margin-left: 80px;
+}
+#argazki7{
+    margin-left: 182px;
+}
+#argazki8{
+    margin-left: 10px;
+}
+#argazki9{
+    margin-left: 0px;
+}
+footer{
+    background-color: #CFBFBC;
+}
+footer div{
+    margin-left: 30px;
+}
+#twitter{
+    margin-top: 10px;
+}
+#erosketabaldintzak{
+    margin-top: 15px;
+}
+#bilatu{
+    float: right;
+    margin-right: 20px;
+}
+#argazki10{
+    margin-left: 150px;
+}
+#argazki11{
+    margin-left: 10px;
+}
+h3{
+    margin-left: 60px;
+}
+#argazki21{
+    margin-left:30px;
+}
+#argazki22{
+    margin-left:160px;
+}
+#argazki23{
+    margin-left: 165px;
+}
+#argazki24{
+    margin-left: 90px;
+}
+#argazki25{
+    margin-left: 60px;
+}
+#argazki26{
+    margin-left: 132px;
+}

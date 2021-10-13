@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-dic-2018, 9:48:32
+    Author     : Garikoitz
+*/
+body{
+    color: red;
+    font-family: arial;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 700px;
+    border-style: solid;
+    border-color: firebrick;
+    border-width: 15px;
+    background-image: url("https://atravesdelasescrituras.files.wordpress.com/2016/08/fondos-pantalla-paisajes-pc.jpg");
+    background-repeat : no-repeat;
+    background-attachment : fixed;
+    background-position : center center;
+    background-size:100%;
+    text-align: center;
+}
+a{
+    color: white;
+}
+a:visited{
+    color: red;
+}
+
