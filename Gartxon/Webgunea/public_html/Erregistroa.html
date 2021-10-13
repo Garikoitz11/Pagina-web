@@ -20,10 +20,10 @@ and open the template in the editor.
     <form method="get" action="">
     <fieldset>
         <legend style="font-size: 24px;"><strong>Erregistratu:</strong></legend>
-    <label for="izena">Izena</label><br><input type="text" name="izena" placeholder="Sartu zure izena" maxlength="15">
+    <label for="izena">Izena</label><br><input type="text" name="izena" placeholder="Sartu zure izena" pattern="[A-Z]{1}[a-z]{0,14}">
     <br>
     <br>
-    <label for="abizenak">Abizena</label><br><input type="text" name="abizena" placeholder="Sartu zure abizena" maxlength="40">
+    <label for="abizenak">Abizena</label><br><input type="text" name="abizena" placeholder="Sartu zure abizena" pattern="[A-Z]{1}[a-z]{0,14}[\s]{1}[A-Z]{1}[a-z]{0,14}">
     <br>
     <br>
     <label for="NAN">NAN</label><br><input type="text" name="NAN" placeholder="Sartu zure NAN" pattern="[0-9]{8}[A-Za-z]{1}">
@@ -37,10 +37,10 @@ and open the template in the editor.
     <label for="jaiotza">Jaiotze data</label><br><input type="date" name="jaiotza" placeholder="Sartu zure jaiotze data" >
     <br>
     <br>
-    <label for="mugikorra">Mugikorra</label><br><input type="tel" name="Mugikorra" placeholder="Sartu zure mugikorra" maxlength="9" pattern="[0-9]"  >
+    <label for="mugikorra">Mugikorra</label><br><input type="tel" name="Mugikorra" placeholder="Sartu zure mugikorra" maxlength="9" pattern="[0-9]{9}"  >
     <br>
     <br>
-    <label for="posta">Posta elektronikoa</label><br><input type="email" name="posta" placeholder="Sartu zure posta" maxlength="10">
+    <label for="posta">Posta elektronikoa</label><br><input type="email" name="posta" placeholder="Sartu zure posta" maxlength="20">
     <br>
     <br>
     <label for="pasahitza">Pasahitza</label><br><input type="password" name="pasahitza" placeholder="Sartu zure pasahitza">
