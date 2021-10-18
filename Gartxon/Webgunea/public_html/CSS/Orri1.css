@@ -23,9 +23,11 @@ body{
     background-size:100%;
     text-align: center;
 }
+
 a{
     color: white;
 }
+
 a:visited{
     color: red;
 }
