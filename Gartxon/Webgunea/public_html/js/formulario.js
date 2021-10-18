@@ -11,5 +11,3 @@ function onartuPosta(posta) {
             return true;
         }
     }
-    
-   
