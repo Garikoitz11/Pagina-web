@@ -34,6 +34,17 @@ footer div{
 #margin{
     margin-left: 10px;
 }
+
+
+.formulario__label{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+.foulario__grupo-input{
+    position: relative;
+}
 .formulario__input:focus{
     border: 2px solid #0075ff;
     outline: none;
@@ -53,4 +64,14 @@ footer div{
     z-index: 100;
     font-size: 16px;
     opacity: 0;
+}
+
+.formulario__mensaje{
+    width: 350px;
+    height: 35px;
+    line-height: 35px;
+    background: #f66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;    
 }
