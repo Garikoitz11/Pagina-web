@@ -1,8 +1,11 @@
 <?php
-    $hostname = "db";
+
+    include ("konektatu.php");
+
+    /*$hostname = "db";
     $username = "admin";
     $password = "test";
-    $db = "Gartxon";
+    $db = "Gartxon";*/
 
     $Erabiltzailea=$_POST['usuario'];
     $Izena=$_POST['izena'];
@@ -15,22 +18,31 @@
     $Pasahitza=$_POST['password'];
     $Pasahitza2=$_POST['password2'];
 
-    $conn = mysqli_connect($hostname,$username,$password,$db);
+    //$conn = mysqli_connect($hostname,$username,$password,$db);
     
-    if ($conn->connect_error) {
+   /* if ($conn->connect_error) {
       die("Database connection failed: " . $conn->connect_error);
-    }
+    }*/
   
-  $query = mysqli_query($conn, "INSERT INTO Erregistroa (Erabiltzailea, Izena, Abizenak, NAN, Sexua, JaiotzeData, MugikorraPosta, Pasahitza1, Pasahitza2) VALUES ($Erabiltzailea, $Izena, $Abizena, $NAN, $Sexua, $JaiotzeData, $Mugikorra, $Posta, $Pasahitza,  $Pasahitza2)")
-     or die (mysqli_error($conn));
+    $sartu = "INSERT INTO Erregistroa (Erabiltzailea, Izena, Abizenak, NAN, Sexua, JaiotzeData, Mugikorra, Posta, Pasahitza1, Pasahitza2) VALUES ($Erabiltzailea, $Izena, $Abizena, $NAN, $Sexua, $JaiotzeData, $Mugikorra, $Posta, $Pasahitza,  $Pasahitza2)";
+    
+    $query = mysqli_query($conexion, $sartu);
 
-  /*while ($row = mysqli_fetch_array($query)) {
+    if($query){
+      echo "<script>alert('Erabiltzailea erregistratu da');
+      window.location='/app'</script>";
+    }
+    else{
+      echo "<script>alert('Ezin izan da erregistratu'); window.history.go(-1);</script>";
+    }
+
+    /* or die (mysqli_error($conn));
+
+  while ($row = mysqli_fetch_array($query)) {
     echo
      "<tr>
       <td>{$row['id']}</td>
       <td>{$row['nombre']}</td>
      </tr>";
-     
-  
   }*/
 ?>
