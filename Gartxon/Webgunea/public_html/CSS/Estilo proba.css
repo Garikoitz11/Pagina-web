@@ -1,0 +1,142 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin-top: 50px;
+    margin: 0 auto;
+}
+
+.header {
+    background: darkred;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+    .header a {
+        color: white;
+        text-decoration: none;
+        margin-top: 6px;
+        margin-bottom: 3px;
+    }
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    letter-spacing: 5px;
+    font-size: 1.3em;
+}
+
+.logo-principal {
+    width: 200px;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+    .navigation ul li {
+        display: inline-block;
+    }
+        .navigation ul li a {
+            display: block;
+            padding: 0.5rem 1rem;
+            transition: all 0.4s linear;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+            .navigation ul li a:hover {
+                background: #ca0000;
+            }
+
+main {
+    padding-top: 8rem;
+}
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .column {
+        float: left;
+        padding: 15px;
+    }
+    .menu {
+        width: 75%;
+    }   
+        .menu ul {
+            list-style-type: none;
+            margin-left: 250px;
+            padding: 0;
+            text-align: center;
+        }
+        .menu li {
+            padding: 8px;
+            margin-bottom: 8px;
+            background-color: darkred;
+            color: white;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+            .menu li a{
+                text-decoration: none;
+                color: white;
+                display: block;
+            }
+            .menu li:hover {
+                background-color: #ca0000;
+                width: 70%;
+            }
+            
+h3 {
+    font-family: Comic Sans MS, Arial; 
+    color: darkred;
+}
+
+/*PRODUCTOS*/
+.products-list {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.products-list .product-item {
+    width: 22%;
+    display: inline-block;
+    background: darkred;
+}
+.products-list .product-item a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    display: block;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+.products-list .product-item img {
+    width: 100%;
+}
+
+.footer {
+    background: #f2f2f2;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 6rem;
+}
