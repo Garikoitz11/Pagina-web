@@ -3,6 +3,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -61,27 +67,25 @@ body{
             font-weight: bold;
         }
             .navigation ul li a:hover {
-                background: #ca0000;
+                background: #ce0000;
             }
 
-main {
-    padding-top: 8rem;
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
     .column {
-        float: left;
-        padding: 15px;
+        float: center;
+        padding: 0;
+        margin: 0;
     }
     .menu {
         width: 75%;
     }   
         .menu ul {
             list-style-type: none;
-            margin-left: 250px;
+            margin-left: 34%;
             padding: 0;
             text-align: center;
         }
@@ -103,36 +107,56 @@ main {
                 width: 70%;
             }
             
-h3 {
-    font-family: Comic Sans MS, Arial; 
-    color: darkred;
+.main {
+    max-width: 1500px;
+    width: 90%;
+    margin: auto;
+    margin-top: 8em;
 }
-
+    .main > h1 {
+        color: #494B4D;
+        font-weight: bold;
+        text-align: center;
+        margin: 15px;
+    }
+        main > h1::after{
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #c7c7c7;
+            margin: 20px 0;
+        }
 /*PRODUCTOS*/
 .products-list {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
-.products-list .product-item {
-    width: 22%;
-    display: inline-block;
-    background: darkred;
-}
-.products-list .product-item a {
-    text-decoration: none;
-    text-align: center;
-    color: white;
-    overflow: hidden;
-    display: block;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    transition: all 0.4s linear;
-    border-radius: 5px;
-}
-.products-list .product-item img {
-    width: 100%;
-}
+    .product-item {
+        width: 600px;
+    }
+    .products-list .product-item {
+        width: 22%;
+        margin-left: 8%;    
+        margin-bottom: 25px;   
+        box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.22);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-start;
+    }
+        .products-list .product-item a {
+            display: block;
+            width: 100%;
+            padding: 5px 0px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            background: #1d1d1d;
+        }
+        .products-list .product-item img {
+            width: 100%;
+        }
 
 .footer {
     background: #f2f2f2;
