@@ -3,7 +3,7 @@
     $hostname = "db";
     $username = "admin";
     $password = "test";
-    $db = "Gartxon";
+    $db = "database";
 
     $Erabiltzailea=$_POST['usuario'];
     $Izena=$_POST['nombre'];

@@ -1,5 +1,5 @@
 <?php
-    $conexion = mysqli_connect("db", "admin", "test", "Gartxon");
+    $conexion = mysqli_connect("db", "admin", "test", "database");
     mysqli_set_charset($conexion, "utf8");
     $erabiltzaile = "SELECT Izena, Prezioa FROM Produktuak"; 
 ?>
