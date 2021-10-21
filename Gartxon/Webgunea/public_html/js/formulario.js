@@ -7,10 +7,12 @@ const expresiones = {
 	abizena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, //Letras y espacios, pueden llevar acentos.
 	codigoPostal: /(([1-4][0-9][0-9][0-9][0-9])|(0(?=[1-9][0-9][0-9][0-9]))|(5(?=[0-2][0-9][0-9][0-9])))/,
     NAN: /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i, //Acepta 8 numeros y una letra
+	JaiotzaData: /^(19[3456789]\d|20[01]\d)-\d{2}-\d{2}$/,
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^\w+([\.-]?\w+)*@(hotmail|outlook|yahoo|live|gmail)*.(com|es)+$/,
 	telefono: /^\d{9}$/ // 7 a 14 numeros.
 }
+
 
 const campos = {
 	usuario: false,
@@ -20,16 +22,10 @@ const campos = {
 	NAN: false,
 	password: false,
 	correo: false,
-	telefono: false
+	telefono: false,
+	JaiotzaData: false
 }
-/*function validarFormatoFecha(campo) {
-	var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
-	if ((campo.match(RegExPattern)) && (campo!='')) {
-		  return true;
-	} else {
-		  return false;
-	}
-}*/
+
 
 const validarFormulario = (e) => {
 	switch (e.target.name) {
@@ -64,7 +60,7 @@ const validarFormulario = (e) => {
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
-	}
+			}
 }
 
 const validarCampo = (expresion, input, campo) => {
@@ -115,7 +111,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.abizena && campos.codigoPostal && campos.NAN  && campos.password && campos.correo && campos.telefono && terminos.checked){
+	if(campos.usuario && campos.nombre && campos.abizena && campos.codigoPostal && campos.NAN  && campos.password && campos.correo && campos.telefono && campos.JaiotzaData && terminos.checked ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -130,6 +126,7 @@ formulario.addEventListener('submit', (e) => {
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
-}
-)
+})
+
+
 ;
