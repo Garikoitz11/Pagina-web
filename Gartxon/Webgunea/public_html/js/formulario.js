@@ -1,133 +1,237 @@
-const formulario = document.getElementById('formulario');
-const inputs = document.querySelectorAll('#formulario input');
-
-const expresiones = {
-	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-	nombre: /^[a-zA-ZÀ-ÿ\s]{1,20}$/, // Letras y espacios, pueden llevar acentos.
-	abizena: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, //Letras y espacios, pueden llevar acentos.
-	codigoPostal: /(([1-4][0-9][0-9][0-9][0-9])|(0(?=[1-9][0-9][0-9][0-9]))|(5(?=[0-2][0-9][0-9][0-9])))/,
-    NAN: /^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/i, //Acepta 8 numeros y una letra
-	JaiotzaData: /^(19[3456789]\d|20[01]\d)-\d{2}-\d{2}$/,
-	password: /^.{4,12}$/, // 4 a 12 digitos.
-	correo: /^\w+([\.-]?\w+)*@(hotmail|outlook|yahoo|live|gmail)*.(com|es)+$/,
-	telefono: /^\d{9}$/ // 7 a 14 numeros.
-	
+//Funcion para usuario
+function validarTexto(parametro){
+    var patron = /^[a-zA-Z0-9\_\-]{4,16}$/;
+    if(parametro.search(patron)){
+        return false;
+    }else{
+        return true;
+    }
 }
 
+//Funcion para nombre
+function validarNombre(parametro){
+    var patron = /^[a-zA-ZÀ-ÿ\s]{1,20}$/;
+    if(parametro.search(patron)){
+        return false;
+    }else{
+        return true;
+    }
+}
+//Funcion para apellido
+function validarAbizena(parametro){
+    var patron = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
+    if(parametro.search(patron)){
+        return false;
+    }else{
+        return true;
+    }
+}
+//Funcion para codigo postal
+function validarCodigoPostal(parametro){
+    var patron = /(([1-4][0-9][0-9][0-9][0-9])|(0(?=[1-9][0-9][0-9][0-9]))|(5(?=[0-2][0-9][0-9][0-9])))/;
+    if(parametro.search(patron)){
+        return false;
+    }else{
+        return true;
+    }
+}
+//Funcion para NAN
+function validarNAN(dni) {
+    var numero, let, letra;
+    var expresion_regular_dni = /^[XYZ]?\d{5,8}[A-Z]$/;
 
-const campos = {
-	usuario: false,
-	nombre: false,
-	abizena: false,
-	codigoPostal: false,
-	NAN: false,
-	password: false,
-	correo: false,
-	telefono: false,
-	JaiotzaData: false
+    dni = dni.toUpperCase();
+
+    if(expresion_regular_dni.test(dni) === true){
+        numero = dni.substr(0,dni.length-1);
+        numero = numero.replace('X', 0);
+        numero = numero.replace('Y', 1);
+        numero = numero.replace('Z', 2);
+        let = dni.substr(dni.length-1, 1);
+        numero = numero % 23;
+        letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
+        letra = letra.substring(numero, numero+1);
+        if (letra != let) {
+            //alert('Dni erroneo, la letra del NIF no se corresponde');
+            return false;
+        }else{
+            //alert('Dni correcto');
+            return true;
+        }
+    }else{
+        //alert('Dni erroneo, formato no válido');
+        return false;
+    }
+}
+//Funcion para JaiotzaData
+function validarJaiotzaData(parametro){
+    var patron = /^(19[3456789]\d|20[01]\d)-\d{2}-\d{2}$/;
+    if(parametro.search(patron)){
+        return false;
+    }else{
+        return true;
+    }
+}
+//Funcion para correo
+function validarCorreo(parametro){
+    var patron = /^\w+([\.-]?\w+)*@(hotmail|outlook|yahoo|live|gmail)*.(com|es)+$/;
+    if(parametro.search(patron)){
+        return false;
+    }else{
+        return true;
+    }
+}
+//Funcion para mugikorra
+function validarMugikorra(parametro){
+    var patron = /^\d{9}$/;
+    if(parametro.search(patron)){
+        return false;
+    }else{
+        return true;
+    }
 }
 
+function validarFormulario(){
+   
+   var formulario = document.addForm; 
 
-const validarFormulario = (e) => {
-	switch (e.target.name) {
-		case "usuario":
-			validarCampo(expresiones.usuario, e.target, 'usuario');
-		break;
-		case "nombre":
-			validarCampo(expresiones.nombre, e.target, 'nombre');
-		break;
-		case "abizena":
-			validarCampo(expresiones.abizena, e.target, 'abizena');
-		break;
-		case "codigoPostal":
-			validarCampo(expresiones.codigoPostal, e.target, 'codigoPostal');
-		break;
-		case "NAN":
-			validarCampo(expresiones.NAN, e.target, 'NAN');
-		break;
-		case "JaiotzaData":
-			validarCampo(expresiones.JaiotzaData, e.target, 'JaiotzaData');
-		break;
-		case "password":
-			validarCampo(expresiones.password, e.target, 'password');
-			validarPassword2();
-		break;
-		case "password2":
-			validarPassword2();
-		break;
-		case "correo":
-			validarCampo(expresiones.correo, e.target, 'correo');
-		break;
-		case "telefono":
-			validarCampo(expresiones.telefono, e.target, 'telefono');
-		break;
-			}
+   if(formulario.usuario.value == ""){
+       document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar nombre del usuario.</div>';
+       formulario.usuario.focus();
+       return false;
+   } else if(validarTexto(formulario.usuario.value)== false){
+    document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese usuario.</div>';
+    formulario.usuario.value = "";
+    formulario.usuario.focus();
+    return false;
+   }
+   else{
+       document.getElementById("alerta").innerHTML = "";
+   }
+
+   if(formulario.nombre.value == ""){
+    //alert("Por favor ingresar nombre");
+    document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar nombre .</div>';
+    formulario.nombre.focus();
+    return false;
+    }else if(validarNombre(formulario.nombre.value)== false){
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese nombre.</div>';
+        formulario.nombre.value = "";
+        formulario.nombre.focus();
+        return false;
+    }
+    else{
+    document.getElementById("alerta").innerHTML = "";
+    }
+
+    if(formulario.abizena.value == ""){
+        //alert("Por favor ingresar abizena");
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el abizena.</div>';
+        formulario.abizena.focus();
+        return false;
+        } else if(validarAbizena(formulario.abizena.value)== false){
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese abizena.</div>';
+            formulario.abizena.value = "";
+            formulario.abizena.focus();
+            return false;
+        }
+        else{
+        document.getElementById("alerta").innerHTML = "";
+        }
+
+    if(formulario.codigoPostal.value == ""){
+        //alert("Por favor ingresar codigoPostal");
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el codigoPostal.</div>';
+        formulario.codigoPostal.focus();
+        return false;
+        } else if(validarCodigoPostal(formulario.codigoPostal.value)== false){
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese codigoPostal.</div>';
+            formulario.codigoPostal.value = "";
+            formulario.codigoPostal.focus();
+            return false;
+        }
+        else{
+        document.getElementById("alerta").innerHTML = "";
+        }
+
+    if(formulario.NAN.value == ""){
+        //alert("Por favor ingresar NAN");
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el NAN.</div>';
+        formulario.NAN.focus();
+        return false;
+        } else if(validarNAN(formulario.NAN.value)== false){
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese NAN.</div>';
+            formulario.NAN.value = "";
+            formulario.NAN.focus();
+            return false;
+        }
+        else{
+        document.getElementById("alerta").innerHTML = "";
+        }
+
+    if(formulario.JaiotzaData.value == ""){
+        //alert("Por favor ingresar JaiotzaData");
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el JaiotzaData.</div>';
+        formulario.JaiotzaData.focus();
+        return false;
+        } else if(validarJaiotzaData(formulario.JaiotzaData.value)== false){
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese JaiotzaData.</div>';
+            formulario.JaiotzaData.value = "";
+            formulario.JaiotzaData.focus();
+            return false;
+        }
+        else{
+        document.getElementById("alerta").innerHTML = "";
+        }
+    
+    if(formulario.correo.value == ""){
+        //alert("Por favor ingresar correo");
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el correo.</div>';
+        formulario.correo.focus();
+        return false;
+        }  else if(validarCorreo(formulario.correo.value)== false){
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese correo.</div>';
+            formulario.correo.value = "";
+            formulario.correo.focus();
+            return false;
+        }
+        else{
+        document.getElementById("alerta").innerHTML = "";
+        }
+    
+    if(formulario.telefono.value == ""){
+        //alert("Por favor ingresar telefono");
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el telefono.</div>';
+        formulario.telefono.focus();
+        return false;
+        } else if(validarMugikorra(formulario.telefono.value)== false){
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese telefono.</div>';
+            formulario.telefono.value = "";
+            formulario.telefono.focus();
+            return false;
+        }
+        else{
+        document.getElementById("alerta").innerHTML = "";
+        }
+    
+       // Baldintzak
+        elemento = document.getElementById("terminos");
+        if( !elemento.checked ) {
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor acepta las baldintzak.</div>';
+            return false;
+        }
+
+       //Contraseñas iguales
+       if(formulario.password.value != formulario.password2.value){
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Las contraseñas no son iguales.</div>';
+        formulario.password.value ="";
+        formulario.password2.value = "";
+        formulario.password.focus();
+        return false;
+       } else {
+        document.getElementById("alerta").innerHTML = "";
+       }
+    
+
+   formulario.submit();
 }
-
-const validarCampo = (expresion, input, campo) => {
-	if(expresion.test(input.value)){
-		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
-		campos[campo] = true;
-	} else {
-		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
-		campos[campo] = false;
-	}
-}
-
-const validarPassword2 = () => {
-	const inputPassword1 = document.getElementById('password');
-	const inputPassword2 = document.getElementById('password2');
-
-	if(inputPassword1.value !== inputPassword2.value){
-		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
-		campos['password'] = false;
-	} else {
-		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
-		campos['password'] = true;
-	}
-}
-
-inputs.forEach((input) => {
-	input.addEventListener('keyup', validarFormulario);
-	input.addEventListener('blur', validarFormulario);
-});
-
-formulario.addEventListener('submit', (e) => {
-	e.preventDefault();
-
-	const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.abizena && campos.codigoPostal && campos.NAN  && campos.password && campos.correo && campos.telefono && campos.JaiotzaData && terminos.checked ){
-		formulario.reset();
-
-		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		}, 5000);
-
-		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('formulario__grupo-correcto');
-		});
-		
-	} else {
-		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-	}
-})
-
-
-;
