@@ -183,6 +183,8 @@ body{
     background: #202020;
     padding: 4rem 0;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     margin-top: 6rem;
 }
     .footer-container a{
@@ -204,6 +206,9 @@ body{
         display: flex;
         padding: 20px;
         color: white;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
         .copyright a {
             text-align: center;  

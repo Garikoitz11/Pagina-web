@@ -1,7 +1,7 @@
 <?php
 
-    include ("konektatu.php");
-
+    $conexion = mysqli_connect("db", "admin", "test", "database");
+    mysqli_set_charset($conexion, "utf8");
     /*$hostname = "db";
     $username = "admin";
     $password = "test";
