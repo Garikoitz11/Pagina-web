@@ -1,12 +1,13 @@
 <?php
     $conexion = mysqli_connect("db", "admin", "test", "database");
     mysqli_set_charset($conexion, "utf8");
-    $erabiltzaile = "SELECT Izena, Prezioa FROM Produktuak"; ?>
+    $erabiltzaile = "SELECT Izena, Prezioa FROM Produktuak"; 
+?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gartxon</title>
+        <title>Gartxon S.L</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width", user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0>
         <link rel="stylesheet" type="text/css" href="./CSS/produktuak.css">
