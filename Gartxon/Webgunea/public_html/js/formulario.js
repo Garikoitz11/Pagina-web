@@ -11,6 +11,7 @@ const expresiones = {
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^\w+([\.-]?\w+)*@(hotmail|outlook|yahoo|live|gmail)*.(com|es)+$/,
 	telefono: /^\d{9}$/ // 7 a 14 numeros.
+	
 }
 
 
