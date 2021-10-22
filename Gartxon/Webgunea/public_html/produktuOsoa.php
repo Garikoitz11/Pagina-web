@@ -1,9 +1,9 @@
 <?php
-    $conexion = mysqli_connect("db", "admin", "test", "database");
-    mysqli_set_charset($conexion, "utf8");
-    $erabiltzaile = "SELECT Kodea, Izena, Prezioa FROM Produktuak"; 
-
     //session_start();
+    $ProduktuKode = $_GET["kodea"];
+
+    $conexion = mysqli_connect("db", "admin", "test", "database");
+    $erabiltzaile = "SELECT * FROM Produktuak WHERE Kodea = '$ProduktuKode'"; 
 ?>
 
 <!DOCTYPE html>
@@ -17,13 +17,18 @@
     <body>
         <div class="container-table">
             <div class="table__title">Erabiltzaileen produktuak</div>
+            <div class="table__header">Kodea</div>
             <div class="table__header">Izena</div>
+            <div class="table__header">Mota</div>
+            <div class="table__header">Deskribapena</div>
             <div class="table__header">Prezioa</div>
             <?php $emaitza = mysqli_query($conexion, $erabiltzaile);
             while($row=mysqli_fetch_assoc($emaitza)){?>
+            <div class="table__item"><?php echo $row["Kodea"];?></div>
             <div class="table__item"><?php echo $row["Izena"];?></div>
+            <div class="table__item"><?php echo $row["Mota"];?></div>
+            <div class="table__item"><?php echo $row["Deskribapena"];?></div>
             <div class="table__item"><?php echo $row["Prezioa"];?></div>
-            <div><a href='produktuOsoa.php?kodea=<?php echo $row["Kodea"];?>'>Informazio gehiago</a></div>
             <?php } mysqli_free_result($emaitza);?>
         </div>
     </body>
