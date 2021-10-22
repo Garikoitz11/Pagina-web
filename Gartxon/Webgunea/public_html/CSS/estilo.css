@@ -38,6 +38,13 @@ main {
 	
 }
 
+.alerta a {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+
 .container {
     width: 85%;
     max-width: 1000px;
@@ -191,8 +198,12 @@ width: 200px;
 	text-align: center;
 	color: whitesmoke;
 	display: block;
-	background-color: lightcoral;
+	background-color: #ce0000;
 }
+	.alerta a {
+		color:  white;
+		font-weight: bold;
+	}
 
 .formulario__mensaje-exito-activo {
 	display: block;
@@ -247,6 +258,13 @@ width: 200px;
 		hemen a:hover{
 			background: #ce0000;
 		}
+
+.formulario__grupo a{
+	text-decoration: none;
+	color: darkred;
+	font-weight: bold;
+	border-radius: 7px;
+}
 
 /*FOOTER*/
 .footer-container {
