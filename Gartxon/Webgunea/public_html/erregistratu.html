@@ -24,48 +24,39 @@
 		
 		<div class="alerta" id="alerta"></div>
 		<br>
-	
-
 			<form name = "addForm" action="php/datuakErregistratu.php" class="formulario" id="formulario" method="post">
 
 				<legend class= "registrar" style="font-size: 24px;"><strong>Erregistratu:</strong></legend>
 				<br>
 			<!-- Grupo: erabiltzaile -->
 			<div class="formulario__grupo" id="grupo__usuario">
-				<label for="usuario" class="formulario__label">Usuario</label>
+				<label for="usuario" class="formulario__label">Erabiltzaile</label>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="erabiltzaile" id="usuario" placeholder="markel45">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
 			</div>
 
 			<!-- Grupo: izena -->
 			<div class="formulario__grupo" id="grupo__nombre">
-				<label for="nombre" class="formulario__label">Nombre</label>
+				<label for="nombre" class="formulario__label">Izena</label>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="izena" id="nombre" placeholder="markel">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
 			</div>
 
 			<!-- Grupo: abizena-->
 			<div class="formulario__grupo" id="grupo__abizena">
-				<label for="abizena" class="formulario__label">abizena</label>
+				<label for="abizena" class="formulario__label">Abizena</label>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="abizena" id="abizena" placeholder="martinez">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i> 
-				</div>
-				<p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+					</div>
 			</div>
 
 			<!-- Grupo: posta-kodea -->
 			<div class="formulario__grupo" id="grupo__codigoPostal">
-				<label for="codigoPostal" class="formulario__label">codigoPostal</label>
+				<label for="codigoPostal" class="formulario__label">Posta-kodea</label>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="posta-kodea" id="codigoPostal" placeholder="48903">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
 				<p class="formulario__input-error">El codigoPostal tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
 			</div>
@@ -93,7 +84,7 @@
 
 			<!-- Grupo: pasahitza -->
 			<div class="formulario__grupo" id="grupo__password">
-				<label for="password" class="formulario__label">Contraseña</label>
+				<label for="password" class="formulario__label">Pasahitza</label>
 				<div class="formulario__grupo-input">
 					<input type="password" class="formulario__input" name="pasahitza" id="password" value="">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
@@ -104,10 +95,9 @@
 
 			<!-- Grupo: pasahitza 2 -->
 			<div class="formulario__grupo" id="grupo__password2">
-				<label for="password2" class="formulario__label">Repetir Contraseña</label>
+				<label for="password2" class="formulario__label">Pasahitza errepikatu</label>
 				<div class="formulario__grupo-input">
 					<input type="password" class="formulario__input" name="pasahitza2" id="password2" value="">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 					<span id = "message2" style="color:red"> </span>
 				</div>
 				<p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
@@ -115,39 +105,32 @@
 
 			<!-- Grupo: postaElektronikoa -->
 			<div class="formulario__grupo" id="grupo__correo">
-				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<label for="correo" class="formulario__label">Posta Elektronikoa</label>
 				<div class="formulario__grupo-input">
 					<input type="email" class="formulario__input" name="postaElektronikoa" id="correo" placeholder="correo@correo.com">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
 			</div>
 
 			<!-- Grupo: mugikorra -->
 			<div class="formulario__grupo" id="grupo__telefono">
-				<label for="telefono" class="formulario__label">Teléfono</label>
+				<label for="telefono" class="formulario__label">Mugikorra</label>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="mugikorra" id="telefono" placeholder="612094376">
-					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 				</div>
-				<p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
 			</div>
 
 			<!-- Grupo: baldintzak -->
 			<div class="formulario__grupo" id="grupo__terminos">
 				<label class="formulario__label">
 					<input class="formulario__checkbox" type="checkbox" name="baldintzak" id="terminos">
-					Acepto los Terminos y Condiciones
+					<a href="Erosketabaldintzak.html">Baldintzak</a> onartu
 				</label>
 			</div>
 			
-			<div class="formulario__mensaje" id="formulario__mensaje">
-				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-			</div>
+			
 			<!-- Boton Enviar-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="button" onclick= "validarFormulario();" class="formulario__btn" value="Registrarse">Enviar</button>
-				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+				<button type="button" onclick= "validarFormulario();" class="formulario__btn" value="Registrarse">Erregistratu</button>
 			</div>   
 
 		</form>

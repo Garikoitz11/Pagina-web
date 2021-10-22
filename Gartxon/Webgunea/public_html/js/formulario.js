@@ -52,14 +52,11 @@ function validarNAN(dni) {
         letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
         letra = letra.substring(numero, numero+1);
         if (letra != let) {
-            //alert('Dni erroneo, la letra del NIF no se corresponde');
             return false;
         }else{
-            //alert('Dni correcto');
             return true;
         }
     }else{
-        //alert('Dni erroneo, formato no válido');
         return false;
     }
 }
@@ -96,11 +93,11 @@ function validarFormulario(){
    var formulario = document.addForm; 
 
    if(formulario.usuario.value == ""){
-       document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar nombre del usuario.</div>';
+       document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, erabiltzailea sartu.</div>';
        formulario.usuario.focus();
        return false;
    } else if(validarTexto(formulario.usuario.value)== false){
-    document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese usuario.</div>';
+    document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, erabiltzailea ondo sartu.</div>';
     formulario.usuario.value = "";
     formulario.usuario.focus();
     return false;
@@ -110,12 +107,11 @@ function validarFormulario(){
    }
 
    if(formulario.nombre.value == ""){
-    //alert("Por favor ingresar nombre");
-    document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar nombre .</div>';
+    document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, izena sartu.</div>';
     formulario.nombre.focus();
     return false;
     }else if(validarNombre(formulario.nombre.value)== false){
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese nombre.</div>';
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, izena ondo sartu.</div>';
         formulario.nombre.value = "";
         formulario.nombre.focus();
         return false;
@@ -125,12 +121,11 @@ function validarFormulario(){
     }
 
     if(formulario.abizena.value == ""){
-        //alert("Por favor ingresar abizena");
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el abizena.</div>';
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, abizena sartu.</div>';
         formulario.abizena.focus();
         return false;
         } else if(validarAbizena(formulario.abizena.value)== false){
-            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese abizena.</div>';
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, abizena ondo sartu.</div>';
             formulario.abizena.value = "";
             formulario.abizena.focus();
             return false;
@@ -140,12 +135,11 @@ function validarFormulario(){
         }
 
     if(formulario.codigoPostal.value == ""){
-        //alert("Por favor ingresar codigoPostal");
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el codigoPostal.</div>';
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, posta-kodea sartu.</div>';
         formulario.codigoPostal.focus();
         return false;
         } else if(validarCodigoPostal(formulario.codigoPostal.value)== false){
-            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese codigoPostal.</div>';
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, posta-kodea ondo sartu.</div>';
             formulario.codigoPostal.value = "";
             formulario.codigoPostal.focus();
             return false;
@@ -155,12 +149,11 @@ function validarFormulario(){
         }
 
     if(formulario.NAN.value == ""){
-        //alert("Por favor ingresar NAN");
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el NAN.</div>';
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, NAN-a sartu.</div>';
         formulario.NAN.focus();
         return false;
         } else if(validarNAN(formulario.NAN.value)== false){
-            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese NAN.</div>';
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, NAN-a ondo sartu.</div>';
             formulario.NAN.value = "";
             formulario.NAN.focus();
             return false;
@@ -170,12 +163,11 @@ function validarFormulario(){
         }
 
     if(formulario.JaiotzaData.value == ""){
-        //alert("Por favor ingresar JaiotzaData");
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el JaiotzaData.</div>';
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, jaiotza data sartu.</div>';
         formulario.JaiotzaData.focus();
         return false;
         } else if(validarJaiotzaData(formulario.JaiotzaData.value)== false){
-            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese JaiotzaData.</div>';
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, jaiotza data ondo sartu.</div>';
             formulario.JaiotzaData.value = "";
             formulario.JaiotzaData.focus();
             return false;
@@ -183,14 +175,28 @@ function validarFormulario(){
         else{
         document.getElementById("alerta").innerHTML = "";
         }
-    
+
+    if(formulario.password.value == ""){
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, pasahitza sartu.</div>';
+        formulario.password.focus();
+        return false;
+    }
+    if(formulario.password.value != formulario.password2.value){
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Pasahitzak desberdinak dira</div>';
+        formulario.password.focus();
+        formulario.password2.value ="";
+        formulario.password.value = "";
+        return false;
+    } else {
+        document.getElementById("alerta").innerHTML = "";
+    }
+
     if(formulario.correo.value == ""){
-        //alert("Por favor ingresar correo");
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el correo.</div>';
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, posta-elektronikoa sartu.</div>';
         formulario.correo.focus();
         return false;
         }  else if(validarCorreo(formulario.correo.value)== false){
-            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese correo.</div>';
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a>Mesedez, posta-elektronikoa ondo sartu.</div>';
             formulario.correo.value = "";
             formulario.correo.focus();
             return false;
@@ -200,38 +206,25 @@ function validarFormulario(){
         }
     
     if(formulario.telefono.value == ""){
-        //alert("Por favor ingresar telefono");
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor ingresar el telefono.</div>';
+        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, mugikorra sartu.</div>';
         formulario.telefono.focus();
         return false;
         } else if(validarMugikorra(formulario.telefono.value)== false){
-            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> No se permite ese telefono.</div>';
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, mugikorra ondo sartu.</div>';
             formulario.telefono.value = "";
             formulario.telefono.focus();
             return false;
         }
         else{
         document.getElementById("alerta").innerHTML = "";
-        }1
+        }
     
        // Baldintzak
         elemento = document.getElementById("terminos");
         if( !elemento.checked ) {
-            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Favor acepta las baldintzak.</div>';
+            document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, baldintzak onartu .</div>';
             return false;
         }
-
-       //Contraseñas iguales
-       if(formulario.password.value != formulario.password2.value){
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Las contraseñas no son iguales.</div>';
-        formulario.password.value ="";
-        formulario.password2.value = "";
-        formulario.password.focus();
-        return false;
-       } else {
-        document.getElementById("alerta").innerHTML = "";
-       }
-    
 
    formulario.submit();
 }
