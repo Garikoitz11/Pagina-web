@@ -170,6 +170,35 @@ body{
     margin: auto;
 }
 
+/*BOTON TWITTER Y MAS*/
+.ultimos-botones {
+    float: center;
+    padding: 0;
+    margin: 0;
+    background: #202020;
+}
+    .ultimos-botones ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        margin-left: 25%;
+    }
+    .ultimos-botones li {
+        
+    }
+        .ultimos-botones li a{
+            width: 15%;
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: white;
+        }
+            .ultimos-botones li a:hover {
+                background: #ce0000;
+            }
+        
+
+
 /*FOOTER*/
 .footer-container {
     width: 100%;
@@ -182,6 +211,7 @@ body{
     justify-content: center;
     margin-top: 6rem;
 }
+/*
     .footer-container a{
         display: block;
         color: white;
@@ -190,20 +220,11 @@ body{
         transition: all 0.4s linear;
         border-radius: 7px;
         font-weight: bold;
-        width: 25%;
-        text-align: center;
     }
         .footer-container a:hover {
             background-color: #ce0000;
         }
-    .footer-container .img{
-        width: 50%;
-    }
-    .footer-container .footer-menu {
-        list-style-type: none;
-        width: 25%;
-    }
-
+*/
     .copyright {
         width: 100%;
         background: black;
