@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>insertarProducto</title>
 	<link rel="stylesheet" href="CSS/estilo.css">
-	<script src="js/sartuProduktua.js"></script>
+	<script src="js/sartuProduktu.js"></script>
+	<link rel="shortcut icon" href="irudiak/Favicon.ico" type="image/x-icon">
 </head>
 <body>
 	<header class="header">
@@ -22,12 +23,12 @@
 	
 	<main>
 		
-		<div  id="alerta"></div>
+		<div class="alerta" id="alerta"></div>
         
 		<br>
 	
 
-			<form name = "addForm" class="formulario" id="formulario" >
+			<form name = "addForm" class="formulario" id="formulario" action="produktuaSartu.php" method="post">
 
 				<legend class= "Txertatu" style="font-size: 24px;"><strong>Txertatu produktua:</strong></legend>
 				<br>
@@ -68,7 +69,7 @@
 				
 			<!-- Boton Enviar-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="button" onclick= "validarTxertatu();" class="formulario__btn">Txertatu</button>
+				<button type="button" onclick= "validarTxertatu();" class="formulario__btn" value="sartuProduktua">Txertatu</button>
 			</div>   
 
 		</form>
