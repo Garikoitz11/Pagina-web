@@ -1,8 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 *{
     margin: 0;
     padding: 0;
@@ -177,11 +172,11 @@ body{
 
 /*FOOTER*/
 .footer-container {
-    display: flex;
+    width: 100%;
+    display: inline-block;
     flex-wrap: wrap;
-    margin: auto;
     background: #202020;
-    padding: 4rem 0;
+    padding: 1rem 0;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -195,10 +190,19 @@ body{
         transition: all 0.4s linear;
         border-radius: 7px;
         font-weight: bold;
+        width: 25%;
+        text-align: center;
     }
         .footer-container a:hover {
             background-color: #ce0000;
         }
+    .footer-container .img{
+        width: 50%;
+    }
+    .footer-container .footer-menu {
+        list-style-type: none;
+        width: 25%;
+    }
 
     .copyright {
         width: 100%;
