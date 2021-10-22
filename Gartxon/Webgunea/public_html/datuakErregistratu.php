@@ -3,33 +3,32 @@
     $hostname = "db";
     $username = "admin";
     $password = "test";
-    $db = "Gartxon";
+    $db = "database";
 
-    $Erabiltzailea=$_POST['usuario'];
-    $Izena=$_POST['nombre'];
+    $Erabiltzailea=$_POST['erabiltzaile'];
+    $Izena=$_POST['izena'];
     $Abizena=$_POST['abizena'];
-    $PostaKodea=$_POST['codigoPostal'];
+    $PostaKodea=$_POST['posta-kodea'];
     $NAN=$_POST['NAN'];
     $JaiotzaData=$_POST['JaiotzaData'];
-    $Pasahitza=$_POST['password'];
-    $PostaElektronikoa=$_POST['correo'];
-    $Mugikorra=$_POST['telefono'];
+    $Pasahitza=$_POST['pasahitza'];
+    $PostaElektronikoa=$_POST['postaElektronikoa'];
+    $Mugikorra=$_POST['mugikorra'];
     
     
     $conn = mysqli_connect($hostname,$username,$password,$db);
-    mysqli_set_charset($conexion, "utf8");
     
     if ($conn->connect_error) {
       die("Database connection failed: " . $conn->connect_error);
     }
   
-    $sartu = "INSERT INTO Erregistroa (Erabiltzailea, Izena, Abizenak, PostaKodea, NAN, JaiotzaData, Pasahitza, PostaElektronikoa, Mugikorra) VALUES ($Erabiltzailea, $Izena, $Abizena, $NAN, $JaiotzaData, $Pasahitza, $PostaElektronikoa, $Mugikorra)";
+    $sartu = "INSERT INTO Erregistroa VALUES ('$Erabiltzailea','$Izena','$Abizena','$PostaKodea','$NAN','$JaiotzaData','$Pasahitza','$PostaElektronikoa','$Mugikorra')";
     
     $query = mysqli_query($conn, $sartu);
 
     if($query){
       echo "<script>alert('Erabiltzailea erregistratu da');
-      window.location='/app'</script>";
+      window.location.href='index.html'</script>";
     }
     else{
       echo "<script>alert('Ezin izan da erregistratu'); window.history.go(-1);</script>";
