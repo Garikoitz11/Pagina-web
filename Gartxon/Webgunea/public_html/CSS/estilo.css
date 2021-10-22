@@ -145,6 +145,13 @@ main {
 	color: #119200;
 	display: none;
 }
+.alerta{
+	font-size: 20px;
+	text-align: center;
+	color: whitesmoke;
+	display: block;
+	background-color: lightcoral;
+}
 
 .formulario__mensaje-exito-activo {
 	display: block;
