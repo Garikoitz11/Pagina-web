@@ -4,7 +4,7 @@
     $password = "test";
     $db = "database";
 
-    $Erabiltzaile = $_POST['izena'];
+    $Erabiltzaile = $_POST['erabiltzaile'];
     $Pasahitza = $_POST['pasahitza'];
 
     session_start();
