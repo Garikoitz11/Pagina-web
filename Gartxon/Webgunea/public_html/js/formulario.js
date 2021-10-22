@@ -212,7 +212,7 @@ function validarFormulario(){
         }
         else{
         document.getElementById("alerta").innerHTML = "";
-        }
+        }1
     
        // Baldintzak
         elemento = document.getElementById("terminos");
