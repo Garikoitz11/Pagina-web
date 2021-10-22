@@ -180,28 +180,44 @@ body{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 6rem;
+    margin-top: 20px;
 }
-    .footer-container a{
-        display: block;
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        transition: all 0.4s linear;
-        border-radius: 7px;
-        font-weight: bold;
-        width: 25%;
-        text-align: center;
+    .ultimos-botones {
+        float: center;
+        padding: 0;
+        margin-top: 15px;
+        background: #202020;
     }
-        .footer-container a:hover {
-            background-color: #ce0000;
+        .ultimos-botones ul {
+            list-style-type: none;
         }
-    .footer-container .img{
-        width: 50%;
-    }
-    .footer-container .footer-menu {
-        list-style-type: none;
-        width: 25%;
+        .ultimos-botones li {
+            margin-left: 43,5%;
+            padding: 4px;
+        }
+            .ultimos-botones li a{
+                background: white;
+                color: black;
+                font-size: 14px;
+                font-weight: bold;
+                margin-left: 43.9%;
+                max-width: 15px;
+                min-width: 12%;
+                width: 12%;
+                display: block;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+                border-radius: 400px;
+                padding: 4px;
+            }
+                .ultimos-botones li a:hover {
+                    background: #ce0000;
+                }
+    .img {
+        width: 70%;
+        display: block;
+        margin: auto;
+        margin-bottom: 15px;
     }
 
     .copyright {
@@ -213,7 +229,18 @@ body{
         text-align: center;
         align-items: center;
         justify-content: center;
+        margin-top: 0;
     }
         .copyright a {
-            text-align: center;  
+            text-align: center;
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.4s linear;
+            border-radius: 7px;
+            font-weight: bold; 
         }
+            .copyright a:hover {
+                background: #ce0000;
+            }
