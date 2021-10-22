@@ -4,7 +4,7 @@
         <title>Gartxon S.L.</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+        <link rel="stylesheet" type="text/css" href="CSS/hasiSaio.css">
         <link rel="shortcut icon" href="irudiak/Favicon.ico" type="image/x-icon">
     </head>
     <body>
@@ -20,38 +20,35 @@
         </header>
 
     <nav>
-    <form name="addForm" method="post" action="saioaHasi.php">
+    <form class="formulario" name="addForm" method="post" action="saioaHasi.php">
         <br>
         <legend class="registrar" style="font-size: 24px;"><strong>Hasi saioa:</strong></legend>
         <br>
         <div class="formulario__grupo" id="grupo__usuario">
-            <label for="usuario" class="formulario__label">Erabiltzaile-izena</label>
+            <label for="usuario" class="formulario__label1">Erabiltzaile-izena</label>
             <div class="formulario__grupo-input">
                 <input type="text" class="formulario__input" name="erabiltzaile" id="usuario" placeholder="markel45">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
             </div>
-            <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
         </div>
+        <br>
         <div class="formulario__grupo" id="grupo__password">
-            <label for="password" class="formulario__label">Pasahitza</label>
+            <label for="password" class="formulario__label2">Pasahitza</label>
             <div class="formulario__grupo-input">
                 <input type="password" class="formulario__input" name="pasahitza" id="password" value="">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 <span id = "message1" style="color:red"> </span>
             </div>
-            <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
         </div>
         <br>
 
         <!-- Boton Hasi saioa-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
 				<button type="submit" class="formulario__btn" value="Registrarse">Hasi saioa</button>
-				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
 			</div>
     </form>
     </nav>
+    <br>
     <div class="hemen">
-		Oraindik ez zara erregistratu?<a href="erregistratu.html"> Hasi saioa</a>
+		Oraindik ez zara erregistratu?<a href="erregistratu.html"> Erregistratu</a>
 	</div>
     <footer class="footer-container">
 		<div>

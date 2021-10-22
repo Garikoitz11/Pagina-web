@@ -5,24 +5,6 @@
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#twitter{
-    margin-top: 10px;
-}
-#erosketabaldintzak{
-    margin-top: 15px;
-}
-#bilatu{
-    float: right;
-    margin-right: 20px;
-}
-#goiko{
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-#margin{
-    margin-left: 10px;
-}
 body {
 	font-family: 'Roboto', sans-serif;
 	background: white;
@@ -85,6 +67,8 @@ width: 200px;
 	margin-left: 0%;
 }
    
+
+
 .formulario {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -138,9 +122,6 @@ width: 200px;
 	opacity: 0;
 }
 
-.formulario__checkbox {
-	margin-right: 10px;
-}
 
 .formulario__grupo-terminos, 
 .formulario__mensaje,
@@ -157,13 +138,7 @@ width: 200px;
 	display: none;
 }
 
-.formulario__mensaje-activo {
-	display: block;
-}
 
-.formulario__mensaje p {
-	margin: 0;
-}
 
 .formulario__grupo-btn-enviar {
 	display: flex;
@@ -188,11 +163,6 @@ width: 200px;
 	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
 }
 
-.formulario__mensaje-exito {
-	font-size: 14px;
-	color: #119200;
-	display: none;
-}
 .alerta{
 	font-size: 20px;
 	text-align: center;
@@ -205,46 +175,7 @@ width: 200px;
 		font-weight: bold;
 	}
 
-.formulario__mensaje-exito-activo {
-	display: block;
-}
 
-/* ----- -----  Estilos para Validacion ----- ----- */
-.formulario__grupo-correcto .formulario__validacion-estado {
-	color: #1ed12d;
-	opacity: 1;
-}
-
-.formulario__grupo-incorrecto .formulario__label {
-	color: #bb2929;
-}
-
-.formulario__grupo-incorrecto .formulario__validacion-estado {
-	color: #bb2929;
-	opacity: 1;
-}
-
-.formulario__grupo-incorrecto .formulario__input {
-	border: 3px solid #bb2929;
-}
-
-
-/* ----- -----  Mediaqueries ----- ----- */
-@media screen and (max-width: 800px) {
-	.formulario {
-		grid-template-columns: 1fr;
-	}
-
-	.formulario__grupo-terminos, 
-	.formulario__mensaje,
-	.formulario__grupo-btn-enviar {
-		grid-column: 1;
-	}
-
-	.formulario__btn {
-		width: 100%;
-	}
-}
 
 .hemen {
 	text-align: center;
