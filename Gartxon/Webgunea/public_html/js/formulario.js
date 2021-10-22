@@ -78,6 +78,7 @@ function validarCorreo(parametro){
         return true;
     }
 }
+
 //Funcion para mugikorra
 function validarMugikorra(parametro){
     var patron = /^\d{9}$/;
