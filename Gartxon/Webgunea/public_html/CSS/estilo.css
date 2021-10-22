@@ -36,7 +36,43 @@ main {
 	margin: auto;
 	padding: 40px;
 }
+.container {
+    width: 85%;
+    max-width: 1000px;
+    margin-top: 50px;
+    margin: 0 auto;
+}
 
+.header a {
+	color: white;
+	text-decoration: none;
+	margin-top: 6px;
+	margin-bottom: 3px;
+}
+
+.logo-nav-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+letter-spacing: 5px;
+font-size: 1.3em;
+}
+
+.logo-principal {
+width: 200px;
+}
+
+.header {
+    background: #202020;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+   
 .formulario {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -144,6 +180,13 @@ main {
 	font-size: 14px;
 	color: #119200;
 	display: none;
+}
+.alerta{
+	font-size: 20px;
+	text-align: center;
+	color: whitesmoke;
+	display: block;
+	background-color: lightcoral;
 }
 
 .formulario__mensaje-exito-activo {
