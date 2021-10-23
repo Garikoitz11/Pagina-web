@@ -63,12 +63,7 @@ body{
             .navigation ul li a:hover {
                 background: #ce0000;
             }
-/*
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}*/
+
 .main {
     max-width: 1500px;
     width: 90%;
