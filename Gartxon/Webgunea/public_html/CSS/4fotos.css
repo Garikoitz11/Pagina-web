@@ -18,7 +18,7 @@ body{
 
 .header {
     background: #202020;
-    position:absolute;
+    position: absolute;
     left: 0;
     top: 0;
     right: 0;
@@ -45,39 +45,10 @@ body{
     width: 200px;
 }
 
-.titulo{
-    text-align: center;
-    font-weight: bold;
-    font-size: 45px;
-    margin-top: 120px;
-}
-
-.europa{
-    text-align: center;
-    color: darkgrey;
-    font-weight: bold;
-    font-size: 32px;
-    margin-top: 30px;
-}
-
-.edukia{
-    font-size: 24px;
-    margin-left: 70px;
-    margin-top: 40px;
-}
-
-.capitulos{
-    font-size: 18px;
-    margin-left: 90px;
-    margin-top: 30px;
-    color: darkgrey;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 .titulillos{
+    font-weight: bold;
     font-size: 24px;
-    margin-top: 40px;
+    margin-top: 120px;
     margin-left: 70px;
 }
 
@@ -85,9 +56,6 @@ body{
     margin-top: 10px;
     margin-left: 100px;
     color: dimgrey;
-}
-.margen{
-    margin-top: 200px;
 }
 
 
