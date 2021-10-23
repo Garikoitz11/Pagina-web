@@ -19,11 +19,12 @@
             <div class="table__title">Erabiltzaileen produktuak</div>
             <div class="table__header">Izena</div>
             <div class="table__header">Prezioa</div>
+            <div class="table__header"></div>
             <?php $emaitza = mysqli_query($conexion, $erabiltzaile);
             while($row=mysqli_fetch_assoc($emaitza)){?>
             <div class="table__item"><?php echo $row["Izena"];?></div>
             <div class="table__item"><?php echo $row["Prezioa"];?></div>
-            <div><a href='produktuOsoa.php?kodea=<?php echo $row["Kodea"];?>'>Informazio gehiago</a></div>
+            <div class="table__item"><a href='produktuOsoa.php?kodea=<?php echo $row["Kodea"];?>'>Informazio gehiago</a></div>
             <?php } mysqli_free_result($emaitza);?>
         </div>
     </body>
