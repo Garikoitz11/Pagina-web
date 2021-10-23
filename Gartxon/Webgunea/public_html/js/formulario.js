@@ -108,11 +108,11 @@ function validarFormulario(){
    }
 
    if(formulario.nombre.value == ""){
-    document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, izena sartu.</div>';
+    document.getElementById("nombre").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, izena sartu.</div>';
     formulario.nombre.focus();
     return false;
     }else if(validarNombre(formulario.nombre.value)== false){
-        document.getElementById("alerta").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, izena ondo sartu.</div>';
+        document.getElementById("nombre").innerHTML = '<div class="alert alert-danger"><a href="" class="close" data-dismiss="alert">&times;</a> Mesedez, izena ondo sartu.</div>';
         formulario.nombre.value = "";
         formulario.nombre.focus();
         return false;
