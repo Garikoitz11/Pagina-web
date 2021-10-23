@@ -13,30 +13,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width", user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0>
         <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
-        <script src="js/formulario.js"></script>
+        <script type="text/javascript" src="js/formulario.js"></script>
     </head>
     <body>
-        <div class="container-table">
-            <div class="table__title">Nahi dituzun datuak aldatu</div>
-            <div class="table__header">Erabiltzailea</div>
-            <div class="table__header">Izena</div>
-            <div class="table__header">Abizena</div>
-            <div class="table__header">Posta kodea</div>
-            <div class="table__header">NAN</div>
-            <div class="table__header">Jaiotza data</div>
-            <div class="table__header">Pasahitza</div>
-            <div class="table__header">Posta elektronikoa</div>
-            <div class="table__header">Mugikorra</div>
 
-            <?php $emaitza = mysqli_query($conexion, $erabiltzaile);
+        <?php $emaitza = mysqli_query($conexion, $erabiltzaile);
                 while($row=mysqli_fetch_assoc($emaitza)){?>
 
-            <form name = "addForm" action="datuakErregistratu.php" class="formulario" id="formulario" method="post">
+        <div class="alerta" id="alerta"></div>
+        <br>
+
+        <form name = "addForm" action="datuBaseaAldatu.php" class="formulario" id="formulario" method="post">
 
 				<legend class= "registrar" style="font-size: 24px;"><strong></strong></legend>
 				<br>
 
-            <div class="table__item" value="erabiltzaile"><?php echo $row["Erabiltzailea"];?></div>
+            <div class="table__item" value="erabiltzaile" id="usuario" name="erabiltzaile"><?php echo $row["Erabiltzailea"];?></div>
 
 			<!-- Grupo: izena -->
 			<div class="formulario__grupo" id="grupo__nombre">
@@ -96,7 +88,7 @@
 			<div class="formulario__grupo" id="grupo__password">
 				<label for="password" class="formulario__label">Pasahitza</label>
 				<div class="formulario__grupo-input">
-					<input type="text" class="formulario__input" name="pasahitza2" id="password" value="<?php echo $row["Pasahitza"];?>">
+					<input type="text" class="formulario__input" name="pasahitza2" id="password2" value="<?php echo $row["Pasahitza"];?>">
 					<i class="formulario__validacion-estado fas fa-times-circle"></i>
 					<span id = "message1" style="color:red"> </span>
 				</div>
@@ -117,14 +109,21 @@
 					<input type="text" class="formulario__input" name="mugikorra" id="telefono" value="<?php echo $row["Mugikorra"];?>">
 				</div>
 			</div>
+
+            <!-- Grupo: baldintzak -->
+			<div class="formulario__grupo" id="grupo__terminos">
+				<label class="formulario__label">
+					<input class="formulario__checkbox" type="checkbox" name="baldintzak" id="terminos">
+					<a href="Erosketabaldintzak.html">Baldintzak</a> onartu
+				</label>
+			</div>
 			
 			<!-- Boton Enviar-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="button" onclick= "validarFormulario();" class="formulario__btn" value="Registrarse">Datuak aldatu</button>
+				<button type="button" onclick= "validarFormulario();" class="formulario__btn">Datuak aldatu</button>
 			</div>   
 
 		</form>
             <?php } mysqli_free_result($emaitza);?>
-        </div>
     </body>
 </html>
