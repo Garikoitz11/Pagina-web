@@ -6,31 +6,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="CSS/bakoitza.css">
         <link rel="shortcut icon" href="irudiak/Favicon.ico" type="image/x-icon">
+
     </head>
     <body>
-        <header>
-        <a href="index.html" target="_self" target="_blank"><img src="irudiak/gartxon1.jpg" width="250px" alt="Gartxon S.L."></a>
+        <header class="header">
+            <div class="container logo-nav-container">
+                <a href="index.html" target="_self" target="_blank"><img class="logo-principal" src="irudiak/gartxon1.jpg" alt="Gartxon S.L."></a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="erregistratu.html" target="_self">ERREGISTRATU</a></li> 
+                        <li><a href="Hasisaioa.html" target="_self">HASI SAIOA</a></li> 
+                    </ul>
+                </nav>                    
+            </div>
         </header>
-        <br><br>
-        <hr>
-        <nav>
-        <img style= "margin-left:400px; margin-top: 20px;" src="irudiak/re2.jpg" width="175px" alt="Resident Evil 2"></a>
-        <div id="mugitu"><h3>Resident Evil 2</h3><br>
-        <div><strong>Bideojoko mota:</strong>&nbsp;Akziozkoa, beldurrezkoa</div><br>
-        <div><strong>PEGI:</strong>&nbsp;18</div><br>
-        <div><strong>Prezioa:</strong>&nbsp;20€</div><br>
-        <a href="Ordaindu.html" style="text-decoration: none; color:darkred;"><div id="bordeak" style="font-size: 20px;">Erosi</div></a></div>
+        <main> 
+        <div class="titulo"> RESIDENT EVIL 2</div>
+        
+        <nav>   
+        <p> <div class="foto"><img src="irudiak/re2.jpg" width="175px" alt="Resident Evil 2"> </div></p>
+        <p>
+        <div class="cuerpo"><strong>Bideojoko mota:</strong>&nbsp;Akziozkoa, beldurrezkoa</div>
+        <div class="cuerpo"><strong>PEGI:</strong>&nbsp;18</div>
+        <div class="cuerpo"><strong>Prezioa:</strong>&nbsp;20€</div><br>
+        <a class="cuerpo"  style="text-decoration: none; color:darkred;"><div id="bordeak" style="font-size: 20px;">"<script>alert('Erabiltzailea erregistratu da');
+            window.location.href='index.html'</script>";Erosi</div></a></div>
+        </p>
         </nav>
-        <br>
-        <br>
-        <br>
-        <hr>
-        <footer>
-            <div id="erosketabaldintzak"><a href="Erosketabaldintzak.html">Erosketa baldintzak</a></div>
-            <div id="twitter"><a href="https://twitter.com/gartxon?lang=en">Twitter-a</a></div>
-            <br>
-            <br>
-            <img src="irudiak/footer1.png" style="width:100%" alt="Ordainketa segurua">
+        </main>
+        
+        <footer class="footer-container">
+            <div class="ultimos-botones">
+                <nav>
+                    <ul>
+                        <li><a href="Erosketabaldintzak.html" target="_self">Erosketa baldintzak</a></li>
+                        <li><a href="https://twitter.com/gartxon?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @gartxon</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+                    </ul>
+                </nav> 
+            </div>
+            <div class="footer-container">
+                <div class="img">
+                    <img src="irudiak/footer1.png" style="width:100%" alt="Ordainketa segurua">
+                </div>
+                <div class="copyright">
+                    &#169 Todos los Derechos Reservados |<a href="#">Gartxon</a>
+                </div>
+            </div>
         </footer>
     </body>
 </html>
