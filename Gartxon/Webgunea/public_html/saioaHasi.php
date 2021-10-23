@@ -8,7 +8,7 @@
     $Pasahitza = $_POST['pasahitza'];
 
     session_start();
-    $_SESSION["izena"] = $Erabiltzaile;
+    $_SESSION['izena'] = $Erabiltzaile;
 
     $conn = mysqli_connect($hostname,$username,$password,$db);
     
@@ -20,7 +20,7 @@
     if($filas){
         
         //header("location:home.php");
-        echo "<script>window.location.href='datuakAldatu.php?Erabiltzailea=$Erabiltzaile'</script>";
+        echo "<script>window.location.href='datuakAldatu.php'</script>";
     
     }else{
        

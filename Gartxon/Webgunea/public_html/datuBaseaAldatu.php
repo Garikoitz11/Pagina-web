@@ -1,11 +1,12 @@
 <?php
+  session_start();
 
     $hostname = "db";
     $username = "admin";
     $password = "test";
     $db = "database";
 
-    $Erabiltzailea=$_POST['erabiltzaile'];
+    $Erabiltzailea=$_SESSION['izena'];
     $Izena=$_POST['izena'];
     $Abizena=$_POST['abizena'];
     $PostaKodea=$_POST['posta-kodea'];
@@ -23,7 +24,8 @@
     }
   
     $sartu = "UPDATE Erregistroa SET Izena = '$Izena', Abizenak = '$Abizena', PostaKodea = '$PostaKodea', NAN = '$NAN', JaiotzaData = '$JaiotzaData', Pasahitza = '$Pasahitza', PostaElektronikoa = '$PostaElektronikoa', Mugikorra = '$Mugikorra' WHERE Erabiltzailea = '$Erabiltzailea'";
-    
+   
+
     $query = mysqli_query($conn, $sartu);
 
     if($query){

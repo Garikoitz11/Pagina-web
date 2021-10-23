@@ -26,7 +26,7 @@
 		<div class="alerta" id="alerta"></div>
 		<br>
 
-			<form name = "addForm" action="datuakErregistratu.php" class="formulario" id="formulario" method="post">
+			<form name = "addForm" onsubmit="return validar()" action="datuakErregistratu.php" class="formulario" id="formulario" method="post">
 
 				<legend class= "registrar" style="font-size: 24px;"><strong>Erregistratu:</strong></legend>
 				<br>
@@ -132,7 +132,7 @@
 			
 			<!-- Boton Enviar-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="button" onclick= "validarFormulario();" class="formulario__btn" value="Registrarse">Erregistratu</button>
+				<button type="submit"  class="formulario__btn" value="Registrarse">Erregistratu</button>
 			</div>   
 
 		</form>
