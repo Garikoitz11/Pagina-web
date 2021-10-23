@@ -20,8 +20,7 @@
     if($filas){
         
         //header("location:home.php");
-        echo "<script>alert('Erabiltzailea erregistratu da');
-        window.location.href='index.html'</script>";
+        echo "<script>window.location.href='datuakAldatu.php?Erabiltzailea=$Erabiltzaile'</script>";
     
     }else{
        
