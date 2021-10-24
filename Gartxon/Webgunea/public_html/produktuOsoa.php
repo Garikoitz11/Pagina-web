@@ -43,10 +43,18 @@
             <div class="table__item"><?php echo $row["Deskribapena"];?></div>
             <div class="table__item"><?php echo $row["Prezioa"];?></div>
             <div class="table__item"><a href='produktuaAldatu.php'>Editatu</a></div>
-            <div class="table__item"><a href='produktuaEzabatu.php'>Ezabatu</a></div>
+            <div class="table__item"><a href='#' onclick="galdetu(<?php echo['kodea']?>)">Ezabatu</a></div>
             <?php } mysqli_free_result($emaitza);?>
         </div>
-
+                <script type="text/javascript">
+                    function galdetu(id)
+                    {
+                        if(confirm("Ziur zaude ezabatu nahi duzula?"))
+                        {
+                            window.location.href = "produktuaEzabatu.php"
+                        }
+                    }
+                </script>
         <footer>
             <div class="copyright">
                 &#169 Todos los Derechos Reservados |<a href="index.html">Gartxon</a>
