@@ -31,6 +31,6 @@
       window.location.href='index.html'</script>";
     }
     else{
-      echo "<script>alert('Ezin izan da erregistratu'); window.history.go(-1);</script>";
+      echo "<script>alert('Beste erabiltzaile izen bat aukeratu'); window.history.go(-1);</script>";
     }
 ?>

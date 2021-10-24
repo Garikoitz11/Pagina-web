@@ -25,7 +25,7 @@
 
     if($query){
       echo "<script>alert('Produktua eguneratu da');
-      window.location.href='index.html'</script>";
+      window.location.href='produktuakKontsultatu.php'</script>";
     }
     else{
       echo "<script>alert('Ezin izan da produktua eguneratu'); window.history.go(-1);</script>";
