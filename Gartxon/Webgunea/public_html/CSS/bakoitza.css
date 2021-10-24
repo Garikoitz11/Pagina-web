@@ -98,7 +98,8 @@ nav{
 }
 
 .erosi{
-    color: darkred;
+    background-color: darkred;
+    color: white;
     font-size: 20px;
 }
 
