@@ -71,7 +71,7 @@ function validarJaiotzaData(parametro){
 }
 //Funcion para correo
 function validarCorreo(parametro){
-    var patron = /^\w+([\.-]?\w+)*@(hotmail|outlook|yahoo|live|gmail)*.(com|es)+$/;
+    var patron = /^\w+([\.-]?\w+)*@(hotmail|outlook|yahoo|live|gmail|ikasle.ehu|ehu)*.(com|es|eus)+$/;
     if(parametro.search(patron)){
         return false;
     }else{
