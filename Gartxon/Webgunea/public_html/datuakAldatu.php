@@ -18,6 +18,11 @@
 		<link rel="shortcut icon" href="irudiak/Favicon.ico" type="image/x-icon">
 	</head>
     <body>
+		<header class="header">
+            <div class="container logo-nav-container">
+                <a href="index.html" target="_self" target="_blank"><img class="logo-principal" src="irudiak/gartxon1.jpg" alt="Gartxon S.L."></a>                   
+            </div>
+        </header>
 		<main>
         <?php $emaitza = mysqli_query($conexion, $erabiltzaile);
                 while($row=mysqli_fetch_assoc($emaitza)){?>
