@@ -131,7 +131,7 @@
 			
 			<!-- Boton Enviar-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn" value="Registrarse">Erregistratu</button>
+				<button type="submit" class="formulario__btn" value="Registrarse">Aldatu</button>
 			</div>   
 
 		</form>
