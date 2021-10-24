@@ -30,13 +30,18 @@
         <div class="alerta" id="alerta"></div>
         <br>
 
-        <form name = "addForm" onsubmit="validar()"  action="datuBaseaAldatu.php" class="formulario" id="formularioregistro" method="post">
+        <form name = "addForm" class="formulario" id="formulario" action="datuBaseaAldatu.php" method="post">
 
 				<legend class= "registrar" style="font-size: 24px;"><strong></strong></legend>
 				<br>
 
-            <div class="table__item" value="erabiltzaile" id="usuario" name="erabiltzaile"><?php echo $row["Erabiltzailea"];?></div>
-
+			<!-- Grupo: Erabiltzaile -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Erabiltzailea</label>
+				<div class="formulario__grupo-input">
+					<input class="formulario__input" name="erabiltzaile" id="usuario" value="<?php echo $row["Erabiltzailea"];?>" disabled>
+				</div>
+			</div>
 			<!-- Grupo: izena -->
 			<div class="formulario__grupo" id="grupo__nombre">
 				<label for="nombre" class="formulario__label">Izena</label>
@@ -127,14 +132,14 @@
 					<a href="Erosketabaldintzak.html">Baldintzak</a> onartu
 				</label>
 			</div>
-			<?php }?>	
 			
 			<!-- Boton Enviar-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit" class="formulario__btn" value="Registrarse">Aldatu</button>
+				<button type="button" onclick= "validarFormulario();" class="formulario__btn" value="sartuProduktua">Txertatu</button>
 			</div>   
 
 		</form>
+		<?php }?>	
 		
 	</main>
 		
