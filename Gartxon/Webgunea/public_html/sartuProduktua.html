@@ -22,16 +22,11 @@
 	</header>
 	
 	<main>
-		
 		<div class="alerta" id="alerta"></div>
-        
 		<br>
-	
-
-			<form name = "addForm" class="formulario" id="formulario" action="produktuaSartu.php" method="post">
-
-				<legend class= "Txertatu" style="font-size: 24px;"><strong>Txertatu produktua:</strong></legend>
-				<br>
+		<form name = "addForm" class="formulario" id="formulario" action="produktuaSartu.php" method="post">
+			<legend class= "Txertatu" style="font-size: 24px;"><strong>Txertatu produktua:</strong></legend>
+			<br>
 			<!-- Grupo: izena -->
 			<div class="formulario__grupo" id="grupo__nombre">
 				<label for="nombre" class="formulario__label">Izena</label>
@@ -57,7 +52,6 @@
 				</div>
 			</div>
 
-
 			<!-- Grupo: prezio-->
 			<div class="formulario__grupo" id="grupo__prezio">
 				<label for="prezio" class="formulario__label">Prezio</label>
@@ -65,35 +59,12 @@
 					<input type="text" class="formulario__input" name="prezio" id="prezio" placeholder="25,57">
 				</div>
 			</div>
-
 				
 			<!-- Boton Enviar-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
 				<button type="button" onclick= "validarTxertatu();" class="formulario__btn" value="sartuProduktua">Txertatu</button>
 			</div>   
-
 		</form>
-		</fieldset>
 	</main>
-	
-	
-	<footer class="footer-container">
-		<div class="ultimos-botones">
-			<nav>
-				<ul>
-					<li><a href="https://twitter.com/gartxon?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @gartxon</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-				</ul>
-			</nav> 
-		</div>
-		<div class="footer-container">
-			<div class="img">
-				<img src="irudiak/footer1.png" style="width:100%" alt="Ordainketa segurua">
-			</div>
-			<div class="copyright">
-				&#169 Todos los Derechos Reservados |<a href="#">Gartxon</a>
-			</div>
-		</div>
-	</footer>
-	
 </body>
 </html>

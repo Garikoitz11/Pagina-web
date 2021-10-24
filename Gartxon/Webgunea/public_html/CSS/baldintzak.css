@@ -9,47 +9,26 @@ body{
     margin: 0;
 }
 
-.container {
-    width: 85%;
-    max-width: 1000px;
-    margin-top: 50px;
-    margin: 0 auto;
-}
-
 .header {
     background: #202020;
-    position:absolute;
-    left: 0;
-    top: 0;
-    right: 0;
+    display: block;
+    margin: 0;
 }
-    .header a {
-        color: white;
-        text-decoration: none;
-        margin-top: 6px;
-        margin-bottom: 3px;
+    .logo {
+        letter-spacing: 5px;
+        font-size: 1.3em;
     }
-
-.logo-nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    letter-spacing: 5px;
-    font-size: 1.3em;
-}
-
-.logo-principal {
-    width: 200px;
-}
+    .logo-principal {
+        width: 200px;
+        display: block;
+        margin: auto;
+    }
 
 .titulo{
     text-align: center;
     font-weight: bold;
     font-size: 45px;
-    margin-top: 120px;
+    margin-top: 50px;
 }
 
 .europa{
@@ -84,6 +63,7 @@ body{
 .texto{
     margin-top: 10px;
     margin-left: 100px;
+    margin-bottom: 50px;
     color: dimgrey;
 }
 .margen{
