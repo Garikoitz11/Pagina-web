@@ -25,7 +25,7 @@
     }else{
        
         //include("Erregistroa.html");
-        echo "<script>alert('Erabiltzailea ez da erregistratu');
+        echo "<script>alert('Erabiltzailea ezin izan du saioa hasi');
         window.location.href='index.html'</script>";
     
         
