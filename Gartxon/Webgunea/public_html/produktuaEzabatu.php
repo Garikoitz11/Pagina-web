@@ -20,7 +20,8 @@
     $query = mysqli_query($conn, $sartu);
 
     if($query){
-      echo "window.location.href='produktuakKontsultatu.php'</script>";
+      echo "<script>alert('Produktua ezabatu da');
+      window.location.href='produktuakKontsultatu.php'</script>";
     }
     else{
       echo "<script>alert('Ezin izan da produktua ezabatu'); window.history.go(-1);</script>";
