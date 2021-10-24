@@ -26,7 +26,7 @@
 		<div class="alerta" id="alerta"></div>
 		<br>
 
-			<form name = "addForm" onsubmit="return validar()" action="datuakErregistratu.php" class="formulario" id="formulario" method="post">
+			<form name = "addForm" action="datuakErregistratu.php" class="formulario" id="formulario" method="post">
 
 				<legend class= "registrar" style="font-size: 24px;"><strong>Erregistratu:</strong></legend>
 				<br>
@@ -125,14 +125,14 @@
 			<div class="formulario__grupo" id="grupo__terminos">
 				<label class="formulario__label">
 					<input class="formulario__checkbox" type="checkbox" name="baldintzak" id="terminos">
-					<a href="Erosketabaldintzak.html" target="blank">Baldintzak</a> onartu
+					<a href="Erosketabaldintzak.html">Baldintzak</a> onartu
 				</label>
 			</div>
 			
 			
 			<!-- Boton Enviar-->
 			<div class="formulario__grupo formulario__grupo-btn-enviar">
-				<button type="submit"  class="formulario__btn" value="Registrarse">Erregistratu</button>
+				<button type="button" onclick= "validarFormulario();" class="formulario__btn" value="Registrarse">Erregistratu</button>
 			</div>   
 
 		</form>
