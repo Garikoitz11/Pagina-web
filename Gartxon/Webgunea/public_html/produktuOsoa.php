@@ -1,9 +1,11 @@
 <?php
-    //session_start();
+    session_start();
     $ProduktuKode = $_GET["kodea"];
+    $_SESSION["kode"] = $ProduktuKode;
+    $Kode = $_SESSION["kode"];
 
     $conexion = mysqli_connect("db", "admin", "test", "database");
-    $erabiltzaile = "SELECT * FROM Produktuak WHERE Kodea = '$ProduktuKode'"; 
+    $erabiltzaile = "SELECT * FROM Produktuak WHERE Kodea = '$Kode'"; 
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +41,8 @@
             <div class="table__item"><?php echo $row["Mota"];?></div>
             <div class="table__item"><?php echo $row["Deskribapena"];?></div>
             <div class="table__item"><?php echo $row["Prezioa"];?></div>
+            <div class="table__item"><a href='produktuaAldatu.php'>Editatu</a></div>
+            <div class="table__item"><a href='produktuaEzabatu.php'>Ezabatu</a></div>
             <?php } mysqli_free_result($emaitza);?>
         </div>
 
