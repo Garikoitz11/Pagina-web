@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width", user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0>
 		<title>Gartxon S.L.</title>
-		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="CSS/estilo.css">
 		<script src="js/sartuProduktu.js"></script>
 		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"> </script>
 		<link rel="shortcut icon" href="irudiak/Favicon.ico" type="image/x-icon">
@@ -31,11 +31,16 @@
         <br>
 
         <form name = "addForm" class="formulario" id="formulario" action="produktuaEditatu.php" method="post">
-			<legend class= "Txertatu" style="font-size: 24px;"><strong>Txertatu produktua:</strong></legend>
+			<legend class= "Txertatu" style="font-size: 24px;"><strong>Aldatu informazioa</strong></legend>
 			<br>
-
-            <div class="table__item" value="id" id="id" name="id"><?php echo $row["Kodea"];?></div>
-			
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Kodea</label>
+				<div class="formulario__grupo-input">
+					<div class="formulario__input" value="id" id="id" name="id"><?php echo $row["Kodea"];?></div>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+			</div>
+            
             <!-- Grupo: izena -->
 			<div class="formulario__grupo" id="grupo__nombre">
 				<label for="nombre" class="formulario__label">Izena</label>

@@ -35,7 +35,12 @@
 				<legend class= "registrar" style="font-size: 24px;"><strong></strong></legend>
 				<br>
 
-            <div class="table__item" value="erabiltzaile" id="usuario" name="erabiltzaile"><?php echo $row["Erabiltzailea"];?></div>
+				<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Erabiltzaile</label>
+				<div class="formulario__grupo-input">
+				<div class="formulario__input" value="erabiltzaile" id="usuario" name="erabiltzaile"><?php echo $row["Erabiltzailea"];?></div>
+				</div>
+			</div>
 
 			<!-- Grupo: izena -->
 			<div class="formulario__grupo" id="grupo__nombre">
